@@ -120,3 +120,109 @@ b=20
 c=20
 print(not a>b) #not operator give true if condition is false and give false is condition is true.
 
+
+#Identity operator
+#is operator
+a=[10,20,30]
+b=[10,20,30]
+print(a is b) # list is mutable because both objects are assign differnt memory location so it give false.
+
+a=[1,2,3]
+b=[3,4,5]
+print(a is b)
+
+a=10
+b=10
+z=a
+a=z
+print(a is b) #True
+print(a is z)  #true
+print(b is z)  #true
+print(a is a) #true
+print(z is a)  #true
+print(b is b) #true
+print(z is z) #true
+print(b is z) #true
+print(a is b) #true
+print(z is b) #true
+
+x=300
+y=300
+print(x is y)
+print(id(x))
+print(id(y))
+
+#is not operator
+a=10
+b=20
+print(a is not b) 
+
+a=[10,20,30]
+b=[10,20,30]
+print(a is not b) #list is mutable because both objects are assign differnt memory location so it give true.
+
+a=[1,2,3]
+b=[3,4,5]
+print(a is not b)
+
+a=10
+b=10
+z=a
+a=z
+print(a is not b) 
+print(a is not z)  
+print(b is not z)  
+print(a is not a) 
+print(z is not a)  
+print(b is not b) 
+print(z is not z) 
+print(b is not z) 
+print(a is not b) 
+print(z is not b) 
+
+x=300
+y=300
+print(x is not y)
+print(id(x))
+print(id(y))
+
+
+x = "hello"
+y = "hello"
+print(x is not y)  # False (Python string interning ki wajah se)
+
+
+m = "world!"
+n = "world!"
+print(m is not n)  # True (Strings mein special characters hone par interning nahi hoti)
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+print(list1 is not list2)  # True (Alag memory locations par hain)
+
+list3 = list1
+print(list1 is not list3)  # False (Same memory location ko refer karte hain)
+
+a = None
+b = None
+print(a is not b)  # False (None ek singleton object hai, sabhi `None` variables same object ko refer karte hain)
+
+
+class Car:
+    pass
+
+car1 = Car()
+car2 = Car()
+print(car1 is not car2)  # True (Dono alag instances hain)
+
+car3 = car1
+print(car1 is not car3)  # False (Dono same object ko refer karte hain)
+
+
+tup1 = (1, 2, 3)
+tup2 = (1, 2, 3)
+print(tup1 is not tup2)  # True (Mostly alag memory locations honge)
+
+tup3 = tup1
+print(tup1 is not tup3)  # False (Same reference)
+
